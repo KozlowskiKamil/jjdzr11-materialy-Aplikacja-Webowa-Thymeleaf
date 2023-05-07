@@ -20,7 +20,7 @@ public class MainController {
     @GetMapping("/")
     String index(Model model) {
         model.addAttribute("dateTime",
-            LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))
+            LocalDateTime.now().format(DateTimeFormatter.ofPattern(DATE_TIME))
         );
         return "index";
     }

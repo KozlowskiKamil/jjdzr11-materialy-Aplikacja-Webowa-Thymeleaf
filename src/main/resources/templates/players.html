@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <link rel="icon" th:href="@{/img/spring-48px.png}" sizes="48x48" />
     <title>JJDZR11 Aplikacja Webowa z Thymeleaf</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <table class="table table-striped">
+        <table class="table table-striped mt-5">
             <thead>
             <tr>
                 <th>ID</th>
@@ -32,7 +33,7 @@
             </tr>
             </tbody>
         </table>
-        <a th:href="@{/}">Powrót na stronę główną</a>
+        <a class="btn btn-secondary" th:href="@{/}">Powrót na stronę główną</a>
     </div>
 </body>
 </html>
