@@ -36,8 +36,7 @@ public class MainController {
 
     @GetMapping("/players")
     String players(Model model) {
-        model.addAttribute("player1", playerService.getPlayer(1))
-             .addAttribute("player2", playerService.getPlayer(2))
+        model.addAttribute("players", playerService.getPlayers())
              .addAttribute("content", "players");
         return "main";
     }

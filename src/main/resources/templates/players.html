@@ -4,22 +4,18 @@
         <tr>
             <th>ID</th>
             <th>Imię</th>
+            <th>Poziom</th>
             <th>Ilość rozegranych gier</th>
             <th>Ilość wygranych gier</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:object="${player1}">
-            <td th:text="*{id}"></td>
-            <td th:text="*{name}"></td>
-            <td th:text="*{gamesPlayed}"></td>
-            <td th:text="*{gamesWon}"></td>
-        </tr>
-        <tr th:object="${player2}">
-            <td th:text="*{id}"></td>
-            <td th:text="*{name}"></td>
-            <td th:text="*{gamesPlayed}"></td>
-            <td th:text="*{gamesWon}"></td>
+        <tr th:each="player : ${players}">
+            <td th:text="${player.id}"></td>
+            <td th:text="${player.name}"></td>
+            <td th:text="${player.level.label}"></td>
+            <td th:text="${player.gamesPlayed}"></td>
+            <td th:text="${player.gamesWon}"></td>
         </tr>
         </tbody>
     </table>
