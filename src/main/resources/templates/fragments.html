@@ -11,9 +11,9 @@
 
 <nav th:fragment="navbar" class="navbar navbar-light bg-light">
     <div class="container-fluid justify-content-center">
-        <a class="btn btn-outline-secondary me-2" th:href="@{/}">Strona główna</a>
-        <a class="btn btn-outline-success me-2" th:href="@{/info}">Informacje o autorze</a>
-        <a class="btn btn-outline-primary" th:href="@{/players}">Lista graczy</a>
+        <a class="btn me-2" th:classappend="${content == 'index'} ? 'btn-secondary' : 'btn-outline-secondary'" th:href="@{/}">Strona główna</a>
+        <a class="btn me-2" th:classappend="${content == 'info'} ? 'btn-success' : 'btn-outline-success'" th:href="@{/info}">Informacje o autorze</a>
+        <a class="btn" th:classappend="${content == 'players'} ? 'btn-primary' : 'btn-outline-primary'" th:href="@{/players}">Lista graczy</a>
     </div>
 </nav>
 
